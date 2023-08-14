@@ -12,7 +12,7 @@ WORKDIR /app
 
 RUN apt update && apt upgrade --yes --fix-missing && apt install python3 python3-venv python3-pip --yes --fix-missing
 
-# RUN pip3 install flask
+RUN pip3 install flask
 
 # RUN apt install git --yes --fix-missing
 
@@ -20,9 +20,6 @@ RUN apt update && apt upgrade --yes --fix-missing && apt install python3 python3
 
 # Copiar todos os arquivos da pasta local para a Workdir do Container
 COPY . ./unemat-360
-
-# Instalar os pacotes essenciais
-RUN pip3 install -r ./unemat-360/requirements.txt
 
 # Definir as porta liberada para uso do container
 EXPOSE 5000

@@ -13,8 +13,6 @@ WORKDIR /app
 
 RUN apt update && apt upgrade --yes --fix-missing && apt install python3 python3-venv python3-pip python3-dev nginx --yes --fix-missing
 
-# RUN pip3 install flask
-
 # RUN apt install git --yes --fix-missing
 
 # RUN git clone https://github.com/drpossati/unemat-360.git
